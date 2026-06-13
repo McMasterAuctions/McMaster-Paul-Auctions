@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply scroll-smooth;
+}
+
+body {
+  @apply bg-gray-50;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  @apply w-2 h-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-200;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 rounded-full hover:bg-gray-500;
+}
+
+/* Loading States */
+.loading-skeleton {
+  @apply animate-pulse bg-gray-300 rounded;
+}
+
+/* Form Elements */
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='number'],
+input[type='tel'],
+select,
+textarea {
+  @apply transition-all;
+}
+
+input:disabled,
+select:disabled,
+textarea:disabled {
+  @apply bg-gray-100 cursor-not-allowed;
+}
+
+/* Links */
+a {
+  @apply transition-colors;
+}
+
+/* Buttons */
+button:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
